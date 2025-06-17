@@ -1,0 +1,9 @@
+#!name=PopMart 时间修改
+#!desc=修改商品详情接口的upTime时间戳
+#!category=PopMart
+
+[MITM]
+hostname = %APPEND% prod-intl-app.popmart.com
+
+[Script]
+popmart_uptime=type=http-response,pattern=^https:\/\/prod-intl-app\.popmart\.com\/shop\/v1\/shop\/productDetails.*,requires-body=1,script-path=https://github.com/MandelJer499856emy/MandelJer499856emy.github.io/raw/refs/heads/main/Shadowrocket/popmart_uptime.js
